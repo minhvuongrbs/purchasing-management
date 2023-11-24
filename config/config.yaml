@@ -1,0 +1,19 @@
+app:
+  env: local
+
+http:
+  port: 8080
+  allow_origins: "*"
+  max_concurrent_conn: 512
+  read_timeout: 10s
+  write_timeout: 10s
+
+primary_data_source:
+  user: root
+  passwd: 123
+  addr: localhost:3306
+  db_name: purchasing_core
+  max_open_conn: 2
+  max_idle_conn: 2
+  conn_max_life_time: 600s
+  allow_native_passwords: true
